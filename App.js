@@ -211,8 +211,8 @@ const styles = StyleSheet.create({
       justifyContent: 'center'
   },
   image:{
-    width: '45%',
-    height: '27.5%',
+    width: '50%',
+    height: '30%',
     resizeMode: 'stretch',
     marginVertical: 8,
   },
