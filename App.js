@@ -100,7 +100,7 @@ export default function App() {
     <SafeAreaView style={styles.screen}>
       <StatusBar backgroundColor="#A8D3C2" barStyle='default'/>
       <View style={styles.container}>
-        <View style={styles.rowView}>
+        <View style={[styles.rowView, {minHeight: 52}]}>
           <Text style={{
               marginVertical: 8,
               borderRadius: 12,
@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
   },
   image:{
     width: '50%',
-    height: '30%',
+    height: '35%',
     resizeMode: 'stretch',
     marginVertical: 8,
   },
