@@ -100,7 +100,7 @@ export default function App() {
     <SafeAreaView style={styles.screen}>
       <StatusBar backgroundColor="#A8D3C2" barStyle='default'/>
       <View style={styles.container}>
-        <View style={[styles.rowView, {height: 52}]}>
+        <View style={styles.rowView}>
           <Text style={{
               marginVertical: 8,
               borderRadius: 12,
@@ -120,18 +120,18 @@ export default function App() {
         {(intento==1) && <Image style={styles.image} source={require("./assets/hangedman/Ahorcado_Parte2.png")}/>}
         {(intento==2) && <Image style={styles.image} source={require("./assets/hangedman/Ahorcado_Parte3.png")}/>}
         {(intento==3) && <Image style={styles.image} source={require("./assets/hangedman/Ahorcado_Parte4.png")}/>}
-        <FlatButton isDisabled={(!hasWon && !hasLost)} onPress={() => getRandomWord()} text="Nueva palabra aleatoria" width='80%'
-          textForm='uppercase' textSize={16} bgColor='#0D324D' textColor='#FFFFFF' />
+        <View style={styles.buttonView}>
+          <FlatButton isDisabled={(!hasWon && !hasLost)} onPress={() => getRandomWord()} text="Nueva palabra aleatoria" width='80%'
+                      textForm='uppercase' textSize={16} bgColor='#0D324D' textColor='#FFFFFF' />
+        </View>
         <Text style={{
-            marginVertical: 8,
-            borderRadius: 12,
+            marginVertical: 6,
             fontWeight: 'bold',
             fontSize: 24,
             textAlign: 'center',
         }}>{progreso}</Text>
         {hasLost && <Text style={{
-            marginVertical: 8,
-            borderRadius: 12,
+            marginVertical: 6,
             fontWeight: 'bold',
             fontSize: 24,
             textAlign: 'center',
@@ -211,15 +211,22 @@ const styles = StyleSheet.create({
       justifyContent: 'center'
   },
   image:{
-    width: '50%',
-    height: '35%',
+    width: '45%',
+    height: '27.5%',
     resizeMode: 'stretch',
-    marginVertical: 16,
+    marginVertical: 8,
+  },
+  buttonView:{
+    width: '90%',
+    height: '6%',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   rowView:{
     width: '90%',
-    height: 40,
-    marginVertical: 16,
+    height: '5%',
+    minHeight: 40,
+    marginVertical: 8,
     flexDirection: 'row',
     justifyContent: 'space-evenly'
   }

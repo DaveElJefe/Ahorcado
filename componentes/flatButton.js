@@ -13,9 +13,9 @@ export default function FlatButton( {text, textSize, textForm, textColor, bgColo
 
 const styles = StyleSheet.create({
     container:{
-        height: 40,
+        flex: 1,
         borderRadius: 8,
-        margin: 8,
+        marginHorizontal: 2
     },
     button:{
         flex: 1,
